@@ -3,13 +3,13 @@
           xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
 
   <!-- Redirige tous les téléchargements de dépendances vers le groupe Nexus -->
-  <mirrors>
+  <!-- <mirrors>
     <mirror>
       <id>nexus</id>
       <mirrorOf>*</mirrorOf>
       <url>http://nexus:8081/repository/maven-public/</url>
     </mirror>
-  </mirrors>
+  </mirrors> -->
 
   <!-- Identifiants de publication associés aux dépôts définis dans distributionManagement -->
   <servers>
