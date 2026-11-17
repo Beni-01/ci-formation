@@ -16,6 +16,8 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <nexus.url>http://localhost:8081</nexus.url>
+    <env>dev</env>
   </properties>
 
   <dependencies>
@@ -70,14 +72,14 @@
   </build>
 
   <!-- Publication des artefacts sur Nexus -->
-  <distributionManagement>
+<distributionManagement>
     <repository>
       <id>nexus-releases</id>
-      <url>http://nexus:8081/repository/maven-releases/</url>
+      <url>${nexus.url}/repository/maven-releases/</url>
     </repository>
     <snapshotRepository>
       <id>nexus-snapshots</id>
-      <url>http://nexus:8081/repository/maven-snapshots/</url>
+      <url>${nexus.url}/repository/maven-snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
