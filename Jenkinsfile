@@ -24,11 +24,7 @@ pipeline {
           usernameVariable: 'NEXUS_USER',
           passwordVariable: 'NEXUS_PASSWORD'
         )]) {
-          sh '''
-            mvn -B -s ci-settings.xml deploy \
-              -DskipTests \
-              -DaltDeploymentRepository="nexus::$NEXUS_URL/repository/maven-releases/"
-          '''
+          sh 'mvn -B -s ci-settings.xml deploy -DskipTests -Dnexus.url=$NEXUS_URL'
         }
       }
     }
